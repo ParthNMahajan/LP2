@@ -1,0 +1,33 @@
+{
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
+    "portsAttributes": {
+        "3000": {
+            "label": "React Application",
+            "onAutoForward": "openPreview"
+        },
+        "5000": {
+            "label": "Express API",
+            "onAutoForward": "notify"
+        },
+        "27017": {
+            "label": "MongoDB",
+            "onAutoForward": "notify"
+        }
+    },
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "mdb.connectionSaving.defaultConnectionSavingLocation": "Workspace",
+                "mdb.confirmRunAll": true,
+                "mdb.showMongoDBHelpExplorer": false
+            },
+            "extensions": [
+                "ms-azuretools.vscode-docker",
+                "ms-vscode.azurecli",
+                "mongodb.mongodb-vscode"
+            ]
+        }
+    }
+}
